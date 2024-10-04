@@ -6,14 +6,11 @@
 /*   By: ktiomico <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 14:33:47 by ktiomico          #+#    #+#             */
-/*   Updated: 2024/10/01 15:48:28 by ktiomico         ###   ########.fr       */
+/*   Updated: 2024/10/04 14:39:14 by ktiomico         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-#include <stdlib.h>
-#include <string.h>
 
 size_t	count_trim(char const *s1, char const *set)
 {
@@ -24,10 +21,10 @@ size_t	count_trim(char const *s1, char const *set)
 	if (!s1 || !set)
 		return (0);
 	start = 0;
-	while (s1[start] && strchr(set, s1[start]))
+	while (s1[start] && ft_strchr(set, s1[start]))
 		start++;
-	end = strlen(s1);
-	while (end > start && strchr(set, s1[end - 1]))
+	end = ft_strlen(s1);
+	while (end > start && ft_strchr(set, s1[end - 1]))
 		end--;
 	len = end - start;
 	return (len);
@@ -44,10 +41,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (!s1 || !set)
 		return (NULL);
 	start = 0;
-	while (s1[start] && strchr(set, s1[start]))
+	while (s1[start] && ft_strchr(set, s1[start]))
 		start++;
-	end = strlen(s1);
-	while (end > start && strchr(set, s1[end - 1]))
+	end = ft_strlen(s1);
+	while (end > start && ft_strchr(set, s1[end - 1]))
 		end--;
 	len = end - start;
 	dest = malloc(sizeof(char) * (len + 1));
@@ -60,6 +57,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (dest);
 }
 /*
+#include <stdio.h>
 int	main(void)
 {
 	char	*s1;
@@ -67,7 +65,7 @@ int	main(void)
 	char	*str;
 
 	s1 = "Ho Hello Ho";
-	set = "Ho";
+	set = "Ho ";
 	str = ft_strtrim(s1, set);
 	printf("%s", str);
 }

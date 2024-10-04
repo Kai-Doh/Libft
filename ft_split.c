@@ -6,7 +6,7 @@
 /*   By: ktiomico <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 15:45:39 by ktiomico          #+#    #+#             */
-/*   Updated: 2024/10/01 23:21:59 by ktiomico         ###   ########.fr       */
+/*   Updated: 2024/10/04 16:13:46 by ktiomico         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,6 +97,7 @@ char	**ft_split(char const *s, char c)
 	return (tab);
 }
 /*
+#include <stdio.h>
 int	main(void)
 {
 	char	**tab;

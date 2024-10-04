@@ -6,7 +6,7 @@
 /*   By: ktiomico <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 23:07:24 by ktiomico          #+#    #+#             */
-/*   Updated: 2024/09/30 23:23:15 by ktiomico         ###   ########.fr       */
+/*   Updated: 2024/10/04 14:21:26 by ktiomico         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	return (NULL);
 }
 /*
+#include <stdio.h>
 int	main(void)
 {
 	char	*big = "Hello";

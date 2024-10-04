@@ -6,7 +6,7 @@
 /*   By: ktiomico <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 23:26:21 by ktiomico          #+#    #+#             */
-/*   Updated: 2024/10/01 01:07:50 by ktiomico         ###   ########.fr       */
+/*   Updated: 2024/10/04 15:56:07 by ktiomico         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,11 @@ int	ft_atoi(const char *str)
 	return (nb * sign);
 }
 /*
+#include <stdio.h>
 int	main(void)
 {
-	char	*str = "  -1234";
+	char	*str = "  -21474836484325345";
 	printf("%d\n", ft_atoi(str));
+	printf("%d\n", atoi(str));
 }
 */

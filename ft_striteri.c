@@ -6,7 +6,7 @@
 /*   By: ktiomico <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 11:33:51 by ktiomico          #+#    #+#             */
-/*   Updated: 2024/10/02 11:54:34 by ktiomico         ###   ########.fr       */
+/*   Updated: 2024/10/04 14:13:35 by ktiomico         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,10 @@ void	ft_toupper_char(unsigned int index, char *c)
     if (*c >= 'a' && *c <= 'z')
         *c = *c - 32;
 }
-
+#include <stdio.h>
 int	main(void)
 {
-	char	str[] = "Hello";
+	char	str[] = "HellejsFDJEsjdFJESFJsjdfJAAJSDFsao";
 
 	ft_striteri(str, ft_toupper_char);
 	printf("%s\n", str);

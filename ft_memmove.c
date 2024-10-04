@@ -6,7 +6,7 @@
 /*   By: ktiomico <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 02:55:02 by ktiomico          #+#    #+#             */
-/*   Updated: 2024/10/03 17:40:06 by ktiomico         ###   ########.fr       */
+/*   Updated: 2024/10/04 13:25:56 by ktiomico         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	return (dest);
 }
 /*
+#include <stdio.h>
 int	main(void)
 {
     char str[] = "Hello, World!";

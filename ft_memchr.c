@@ -6,7 +6,7 @@
 /*   By: ktiomico <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 21:47:43 by ktiomico          #+#    #+#             */
-/*   Updated: 2024/10/01 01:08:43 by ktiomico         ###   ########.fr       */
+/*   Updated: 2024/10/04 16:05:30 by ktiomico         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	return (NULL);
 }
 /*
+#include <stdio.h>
+#include <string.h>
 int	main(void)
 {
 	char	*str = "Hello";
@@ -33,5 +35,6 @@ int	main(void)
 	size_t	n = 5;
 
 	printf("%s\n", (char*)ft_memchr(str, c, n));
+	printf("%s\n", (char*)memchr(str, c, n));
 }
 */

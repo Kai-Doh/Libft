@@ -6,7 +6,7 @@
 /*   By: ktiomico <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/29 02:44:15 by ktiomico          #+#    #+#             */
-/*   Updated: 2024/10/03 12:29:39 by ktiomico         ###   ########.fr       */
+/*   Updated: 2024/10/04 16:08:50 by ktiomico         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,14 @@ void	*ft_memcpy(void *restrict dest, const void *restrict src, size_t num)
 	return (dest);
 }
 /*
+#include <stdio.h>
+#include <string.h>
 int	main(void)
 {
 	char dest[10];
 	char *src = "Hello.";
 
-	printf("%s", (char *)ft_memcpy(dest, src, 10));
+	printf("%s\n", (char *)ft_memcpy(dest, src, 10));
+	printf("%s\n", (char *)memcpy(dest, src, 10));
 }
 */

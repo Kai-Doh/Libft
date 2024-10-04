@@ -6,7 +6,7 @@
 /*   By: ktiomico <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 22:12:09 by ktiomico          #+#    #+#             */
-/*   Updated: 2024/10/02 22:15:29 by ktiomico         ###   ########.fr       */
+/*   Updated: 2024/10/04 16:11:32 by ktiomico         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,3 +24,10 @@ void	ft_putendl_fd(char *s, int fd)
 	}
 	write(fd, "\n", 1);
 }
+/*
+int	main(void)
+{
+	ft_putendl_fd("Hello", 1);
+	return (0);
+}
+*/

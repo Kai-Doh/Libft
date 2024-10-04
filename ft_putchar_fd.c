@@ -6,7 +6,7 @@
 /*   By: ktiomico <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 22:03:01 by ktiomico          #+#    #+#             */
-/*   Updated: 2024/10/02 22:05:30 by ktiomico         ###   ########.fr       */
+/*   Updated: 2024/10/04 16:12:30 by ktiomico         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,3 +16,10 @@ void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }
+/*
+int	main(void)
+{
+	ft_putchar_fd('a', 1);
+	return (0);
+}
+*/

@@ -6,7 +6,7 @@
 /*   By: ktiomico <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 11:05:04 by ktiomico          #+#    #+#             */
-/*   Updated: 2024/10/02 11:32:37 by ktiomico         ###   ########.fr       */
+/*   Updated: 2024/10/04 14:20:30 by ktiomico         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,13 +34,22 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return (result);
 }
 /*
+char	ft_toupper_char(unsigned int index, char c)
+{
+    (void)index;
+    if (c >= 'a' && c <= 'z')
+        c = c - 32;
+    return (c);
+}
+
+#include <stdio.h>
 int	main(void)
 {
 	char	*str;
     char	*result;
 
     str = "Hello";
-    result = ft_strmapi(str, ft_toupper);
+    result = ft_strmapi(str, ft_toupper_char);
     if (result)
     {
         printf("%s\n", result);
