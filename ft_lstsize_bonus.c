@@ -1,40 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ktiomico <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/30 21:47:43 by ktiomico          #+#    #+#             */
-/*   Updated: 2024/10/05 14:11:48 by ktiomico         ###   ########.fr       */
+/*   Created: 2024/10/03 15:22:18 by ktiomico          #+#    #+#             */
+/*   Updated: 2024/10/03 15:47:10 by ktiomico         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+int	ft_lstsize(t_list *lst)
 {
-	size_t	i;
+	int	size;
 
-	i = 0;
-	while (i < n)
+	size = 0;
+	while (lst)
 	{
-		if (*(unsigned char *)(s + i) == (unsigned char)c)
-			return ((void *)(s + i));
-		i++;
+		lst = lst->next;
+		size++;
 	}
-	return (NULL);
+	return (size);
 }
 /*
 #include <stdio.h>
-#include <string.h>
 int	main(void)
 {
-	char	*str = "Hello";
-	char	c = 'l';
-	size_t	n = 5;
+	t_list	*lst;
+	t_list	*new;
+	t_list	*new2;
 
-	printf("%s\n", (char*)ft_memchr(str, c, n));
-	printf("%s\n", (char*)memchr(str, c, n));
+	lst = ft_lstnew("Hello");
+	new = ft_lstnew("World");
+	new2 = ft_lstnew("42");
+	lst->next = new;
+	new->next = new2;
+	printf("%d\n", ft_lstsize(lst));
 }
 */

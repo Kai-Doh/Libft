@@ -1,40 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ktiomico <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/30 21:47:43 by ktiomico          #+#    #+#             */
-/*   Updated: 2024/10/05 14:11:48 by ktiomico         ###   ########.fr       */
+/*   Created: 2024/10/03 16:41:47 by ktiomico          #+#    #+#             */
+/*   Updated: 2024/10/04 15:01:47 by ktiomico         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	size_t	i;
-
-	i = 0;
-	while (i < n)
-	{
-		if (*(unsigned char *)(s + i) == (unsigned char)c)
-			return ((void *)(s + i));
-		i++;
-	}
-	return (NULL);
+	if (lst)
+		del(lst->content);
+	free(lst);
 }
 /*
 #include <stdio.h>
-#include <string.h>
 int	main(void)
 {
-	char	*str = "Hello";
-	char	c = 'l';
-	size_t	n = 5;
+	t_list	*lst;
 
-	printf("%s\n", (char*)ft_memchr(str, c, n));
-	printf("%s\n", (char*)memchr(str, c, n));
+	lst = ft_lstnew("Hello");
+	printf("%s\n", lst->content);
+	ft_lstdelone(lst, free);
+	printf("%s\n", lst->content);
 }
 */
